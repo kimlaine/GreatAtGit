@@ -35,6 +35,7 @@
 - Switch to the new branch with `git checkout newbranch`
 - Create a file `feature.cpp` into the new branch and commit
 - Push the new branch to GitHub and observe it in GitHub
+- Delete `newbranch` locally and from GitHub
 
 ### 2.2
 
@@ -43,6 +44,7 @@
 - Branches are commits (tips of chains of commits); HEAD is your current view; typically HEAD points to a branch
 - `HEAD` is a symbolic reference to a branch
 - `git checkout` changes which commit/branch `HEAD` points to; this changes the working tree
+- Try `git checkout --orphan` to get rid of commit history
 - Try checking out an older commit: you'll get to "detached HEAD" state
 
 ### 2.3
@@ -61,11 +63,18 @@
 
 ## Part 3
 
+### 3.1
+
 - Simulate GitHub by creating a new bare repository: `git init --bare testrepo.git`
 - Clone the repository
 - Look at `.git/config` and `.git/refs`
 - Demonstrate examples of local branches, local tracking branches, remote tracking branches, and remote branches
 - Push to a specific remote branch with `git push <remote> <refspec>`
 - Set up custom tracking branches
+
+### 3.2
+
+- Delete your own `testrepo.git` and instead create a mirror of your GitHub `testrepo`
+- Create a local (clone) of `testrepo` and add your mirror as remotes
 - Read about pull requests on GitHub
 - Study SEAL development workflow and set up environment to work across ADO and GitHub
